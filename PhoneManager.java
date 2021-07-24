@@ -32,23 +32,21 @@ public class PhoneManager {
 		}
 		System.out.println("저장되었습니다...");
 		
-		while(true) {
-			System.out.print("검색할 이름>>");
-			String srcName = scan.next();
+		System.out.print("검색할 이름>>");
+		String srcName = scan.next();
 			
-			for(int i=0; i<num; i++) {
-				if(srcName.equals("exit")) {
-					System.out.println("프로그램을 종료니다...");
-					break;
+		for(int i=0; i<num; i++) {
+			if(srcName.equals("exit")) {
+				System.out.println("프로그램을 종료니다...");
+				break;
 				}
-				else if(srcName.equals(Arr[i].getName())) {
-					System.out.println(Arr[i].getName()+"의 번호는 "+Arr[i].getTel()+" 입니다.");
+			else if(srcName.equals(Arr[i].getName())) {
+				System.out.println(Arr[i].getName()+"의 번호는 "+Arr[i].getTel()+" 입니다.");
 				}
-				else if((!srcName.equals(Arr[i].getName())&& i==(num-1))){
-					System.out.println(srcName+"이(가)없습니다.");
+			else if((!srcName.equals(Arr[i].getName())&& i==(num-1))){
+				System.out.println(srcName+"이(가)없습니다.");
 				}
 			}
-		}
 		scan.close();
 	}
 }
